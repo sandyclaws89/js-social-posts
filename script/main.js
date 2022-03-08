@@ -56,12 +56,44 @@ const posts = [
     }
 ];
 
-const containerJs = document.querySelector('.container');
-containerJs.classList.add ('posts-list')
-containerJs.innerHTML= `<div class="card-image">
-<img src="img/${objMember.image}" alt="${objMember.name}" />
+const containerJs = document.getElementById('container');
+containerJs.classList.add ('posts-list');
+console.log ('ciao');
+
+for(let i=0; i< posts.length; i++){ 
+
+const postJs = document.createElement ('div');
+
+postJs.innerHTML= `<div class="post">
+<div class="post__header">
+    <div class="post-meta">                    
+        <div class="post-meta__icon">
+            <img class="profile-pic" src="https://unsplash.it/300/300?image=15" alt="Phil Mangione">                    
+        </div>
+        <div class="post-meta__data">
+            <div class="post-meta__author">Phil Mangione</div>
+            <div class="post-meta__time">4 mesi fa</div>
+        </div>                    
+    </div>
 </div>
-<div class="card-text">
-<h3>${objMember.name}</h3>
-<p>${objMember.role}</p>
+<div class="post__text">Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.</div>
+<div class="post__image">
+    <img src="https://unsplash.it/600/300?image=171" alt="">
+</div>
+<div class="post__footer">
+    <div class="likes js-likes">
+        <div class="likes__cta">
+            <a class="like-button  js-like-button" href="#" data-postid="1">
+                <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
+                <span class="like-button__label">Mi Piace</span>
+            </a>
+        </div>
+        <div class="likes__counter">
+            Piace a <b id="like-counter-1" class="js-likes-counter">80</b> persone
+        </div>
+    </div> 
+</div>            
 </div>`;
+
+containerJs.append(postJs);
+}
