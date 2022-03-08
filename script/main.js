@@ -123,21 +123,47 @@ for(let i=0; i< posts.length; i++){
             </div>            
             </div>`;
         containerJs.append(postJs);
-        let likeBtn = document.querySelector('.like-button');
-        likeBtn.addEventListener('click', like);
+       
 
-        function like(event){
-            likeBtn.classList.add('like-button--liked');
-           
-
-            let likedJs = document.getElementById('like-counter-1');
-            likedJs.value = likedJs++
-            console.log(likedJs);
-            event.preventDefault()
-
-                
-            }
+        
 }
+let likeBtn = document.querySelector('.like-button');
+likeBtn.addEventListener('click', like);
+// console.log(posts[i].likes);
+function like(event){
+    likeBtn.classList.add('like-button--liked');
+    // let arrLike = [];
+//    for(let i=0; i<posts.length; i++){
+//     let likedJs= posts[i].likes;
+//     arrLike.push(likedJs)
+//     console.log(arrLike)
+//    }
+//    let likedJs= posts[i].likes;
+    // arrLike= arrLike[0]++;
+//    console.log(arrLike)
+    
+    
+    let likeCounterdJs = document.getElementById('like-counter-1');
+    likeCounterdJs ++;
+    likeCounterdJs.innerHTML = 'likeCounterdJs';
+
+    // for(let i=0; i<posts.length;i++){
+
+
+    // }
+    // arrLike[0]=  arrLike[2]+ arrLike[2];
+    // console.log(arrLike)
+    // likeCounterdJs.innerHTML = likedJs;
+    // likedJs++; 
+
+    
+    
+    // console.log(likedJs);
+
+    event.preventDefault()
+
+        
+    }
 
 
 
