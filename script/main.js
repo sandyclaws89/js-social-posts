@@ -87,7 +87,7 @@ containerJs.classList.add ('posts-list');
 // const 
 // console.log ('ciao');
 
-
+let likeBtn;
 for(let i=0; i< posts.length; i++){ 
     
     console.log(posts[i].author)
@@ -124,13 +124,14 @@ for(let i=0; i< posts.length; i++){
             </div>`;
         containerJs.append(postJs);
        
-
+    likeBtn = postJs.querySelector(".like-button");
         
 }
-let likeBtn = document.querySelector('.like-button');
+
 likeBtn.addEventListener('click', like);
 // console.log(posts[i].likes);
 function like(event){
+    event.preventDefault()
     likeBtn.classList.add('like-button--liked');
     // let arrLike = [];
 //    for(let i=0; i<posts.length; i++){
@@ -160,7 +161,7 @@ function like(event){
     
     // console.log(likedJs);
 
-    event.preventDefault()
+    
 
         
     }
