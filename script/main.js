@@ -87,7 +87,7 @@ containerJs.classList.add ('posts-list');
 // const 
 // console.log ('ciao');
 
-let likeBtn;
+// let likeBtn;
 for(let i=0; i< posts.length; i++){ 
     
     console.log(posts[i].author)
@@ -124,47 +124,24 @@ for(let i=0; i< posts.length; i++){
             </div>`;
         containerJs.append(postJs);
        
-    likeBtn = postJs.querySelector(".like-button");
+        // console.log(posts[i].likes);
+        let likeBtn = postJs.querySelector(".like-button");
         
-}
-
-likeBtn.addEventListener('click', like);
-// console.log(posts[i].likes);
+        likeBtn.addEventListener('click', like);
 function like(event){
     event.preventDefault()
     likeBtn.classList.add('like-button--liked');
-    // let arrLike = [];
-//    for(let i=0; i<posts.length; i++){
-//     let likedJs= posts[i].likes;
-//     arrLike.push(likedJs)
-//     console.log(arrLike)
-//    }
-//    let likedJs= posts[i].likes;
-    // arrLike= arrLike[0]++;
-//    console.log(arrLike)
-    
-    
+       
     let likeCounterdJs = document.getElementById('like-counter-1');
-    likeCounterdJs ++;
-    likeCounterdJs.innerHTML = 'likeCounterdJs';
+    likeCounterdJs++;
+    console.log(likeCounterdJs)
+    // likeCounterdJs.innerHTML = likeCounterdJs;
 
-    // for(let i=0; i<posts.length;i++){
-
-
-    // }
-    // arrLike[0]=  arrLike[2]+ arrLike[2];
-    // console.log(arrLike)
-    // likeCounterdJs.innerHTML = likedJs;
-    // likedJs++; 
-
-    
-    
-    // console.log(likedJs);
-
-    
-
+}
         
-    }
+}
+
+
 
 
 
