@@ -135,6 +135,13 @@ for(let i=0; i< posts.length; i++){
         likeCounterdJs = (posts[i].likes)+1;
         event.preventDefault()
         likeBtn.classList.add('like-button--liked');
+        // likeBtn.addEventListener('click', notlike);
+
+        // function notlike (){
+        //     likeBtn.classList.remove('like-button--liked');
+        //     likeCounterdJs = (posts[i].likes)-1;
+
+        // }
         bJs.innerHTML = likeCounterdJs;
         
         // likeCounterdJs= likeCounterdJs +1; 
